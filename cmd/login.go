@@ -21,7 +21,7 @@ const (
 )
 
 var (
-	auth            = spotify.NewAuthenticator(redirectURI, spotify.ScopeUserModifyPlaybackState, spotify.ScopeUserReadPlaybackState)
+	auth            = spotify.NewAuthenticator(redirectURI, spotify.ScopeUserModifyPlaybackState, spotify.ScopeUserReadPlaybackState, spotify.ScopeUserModifyPlaybackState)
 	codeVerifier, _ = pkce.GenerateCodeVerifier(64, true)
 	codeChallenge   = pkce.GenerateCodeChallenge(codeVerifier, true)
 	state           = "abc123"
